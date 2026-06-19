@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/* ── AMJ Law brand colors ────────────────────────────────── */
+@theme {
+  --color-plum: #2e1a2e;
+  --color-mauve: #6b4765;
+  --color-cream: #f8f3ef;
+  --color-lavender: #e6dff1;
+  --color-rose: #f3d6db;
+  --color-ivory: #fdfaf7;
+}
+
+/*
+ * Fonts use `@theme inline` so the next/font variables (set on <body>) are
+ * inlined directly into the font-* utilities. With a plain @theme block the
+ * font tokens land on :root where --font-cormorant isn't defined, and the
+ * headings silently fall back to a sans-serif.
+ */
+@theme inline {
+  --font-display: var(--font-cormorant), ui-serif, Georgia, serif;
+  --font-body: var(--font-lato), ui-sans-serif, system-ui, sans-serif;
+  --font-script: var(--font-pinyon), cursive;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--color-plum);
+  color: var(--color-cream);
+  /* --font-lato is set on <body> by next/font; --font-body isn't emitted under @theme inline */
+  font-family: var(--font-lato), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Quiet, single entrance fade — spec calls for a clean load, no scroll effects. */
+@keyframes amj-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.amj-enter {
+  opacity: 0;
+  animation: amj-fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .amj-enter {
+    animation: none;
+    opacity: 1;
+  }
+}
