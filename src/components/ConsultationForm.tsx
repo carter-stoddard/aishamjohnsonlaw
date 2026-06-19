@@ -47,8 +47,8 @@ export default function ConsultationForm() {
         </p>
         <p className="mt-6 font-body text-sm text-plum/55">
           Questions in the meantime? Reach out at{" "}
-          <a href="mailto:hello@amjlaw.com" className="underline">
-            hello@amjlaw.com
+          <a href="mailto:aisha@amjlaw.com" className="underline">
+            aisha@amjlaw.com
           </a>
         </p>
       </div>
@@ -157,8 +157,8 @@ export default function ConsultationForm() {
           <p className="rounded-sm bg-rose/40 px-4 py-3 text-center font-body text-sm text-plum">
             Something went wrong sending your request. Please try again, or
             email{" "}
-            <a href="mailto:hello@amjlaw.com" className="underline">
-              hello@amjlaw.com
+            <a href="mailto:aisha@amjlaw.com" className="underline">
+              aisha@amjlaw.com
             </a>
             .
           </p>

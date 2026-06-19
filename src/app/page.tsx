@@ -62,14 +62,14 @@ export default function Home() {
           </p>
           <div className="mt-5 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-10">
             <a
-              href="mailto:hello@amjlaw.com"
+              href="mailto:aisha@amjlaw.com"
               className="group inline-flex flex-col items-center"
             >
               <span className="font-body text-[11px] uppercase tracking-[0.18em] text-cream/45">
                 Email
               </span>
               <span className="mt-1 font-display text-xl font-light text-cream transition-colors group-hover:text-rose">
-                hello@amjlaw.com
+                aisha@amjlaw.com
               </span>
             </a>
             <span
@@ -77,14 +77,14 @@ export default function Home() {
               className="hidden h-8 w-px bg-cream/15 sm:block"
             />
             <a
-              href="tel:+10000000000"
+              href="tel:+13106420408"
               className="group inline-flex flex-col items-center"
             >
               <span className="font-body text-[11px] uppercase tracking-[0.18em] text-cream/45">
                 Phone
               </span>
               <span className="mt-1 font-display text-xl font-light text-cream transition-colors group-hover:text-rose">
-                (000) 000-0000
+                (310) 642-0408
               </span>
             </a>
           </div>

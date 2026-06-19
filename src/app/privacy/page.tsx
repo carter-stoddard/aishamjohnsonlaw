@@ -56,8 +56,8 @@ export default function PrivacyPage() {
       <LegalSection heading="Contact">
         <p>
           Questions about this Privacy Policy may be directed to{" "}
-          <a href="mailto:hello@amjlaw.com" className="text-rose underline">
-            hello@amjlaw.com
+          <a href="mailto:aisha@amjlaw.com" className="text-rose underline">
+            aisha@amjlaw.com
           </a>
           .
         </p>
