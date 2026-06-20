@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import ConsultationForm from "@/components/ConsultationForm";
 
 export default function Home() {
@@ -9,34 +10,38 @@ export default function Home() {
         <header className="flex justify-center">
           <a
             href="https://amjlaw.com"
-            aria-label="AMJ Law home"
-            className="inline-flex h-[64px] w-[180px] items-center justify-center rounded-sm border border-cream/15 text-cream/40"
+            aria-label="Law Offices of Aisha M. Johnson — home"
+            className="inline-flex items-center justify-center"
           >
-            {/* [PLACEHOLDER: AMJ Law Logo — cream version] */}
-            <span className="font-display text-2xl tracking-[0.2em] text-cream/70">
-              AMJ&nbsp;LAW
-            </span>
+            <Image
+              src="/images/logo.png"
+              alt="Law Offices of Aisha M. Johnson, A Professional Corporation"
+              width={1920}
+              height={600}
+              priority
+              className="h-auto w-[340px] sm:w-[440px]"
+            />
           </a>
         </header>
 
+        {/* ── Portrait ── */}
+        <div className="mt-9 flex justify-center sm:mt-10">
+          <Image
+            src="/images/portrait.png"
+            alt="Aisha M. Johnson, Attorney at Law"
+            width={1080}
+            height={1080}
+            priority
+            className="h-auto w-[240px] sm:w-[280px]"
+          />
+        </div>
+
         {/* ── Hero ── */}
-        <section className="relative mt-14 text-center sm:mt-16">
-          <span
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-x-0 -top-6 select-none font-script text-6xl text-mauve/25 sm:text-7xl"
-          >
-            Aisha
-          </span>
-          <h1 className="relative font-display text-5xl font-light leading-[1.05] text-cream sm:text-6xl">
-            Aisha Johnson
-            <span className="mt-1 block text-2xl font-light text-cream/85 sm:text-3xl">
-              Attorney at Law
-            </span>
+        <section className="mt-7 text-center sm:mt-8">
+          <h1 className="font-display text-5xl font-light leading-[1.05] text-cream sm:text-6xl">
+            Aisha M. Johnson
           </h1>
-          <p className="mt-4 font-display text-lg font-light text-cream/70">
-            Beverly Hills, California
-          </p>
-          <p className="mt-6 font-body text-xs font-bold uppercase tracking-[0.32em] text-rose">
+          <p className="mt-6 font-body text-sm font-bold uppercase tracking-[0.3em] text-rose sm:text-base">
             Schedule Your Consultation
           </p>
         </section>
@@ -60,7 +65,7 @@ export default function Home() {
           <p className="font-body text-xs font-bold uppercase tracking-[0.28em] text-rose">
             Prefer to Reach Out Directly?
           </p>
-          <div className="mt-5 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-10">
+          <div className="mt-5 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-9">
             <a
               href="mailto:aisha@amjlaw.com"
               className="group inline-flex flex-col items-center"
@@ -87,7 +92,35 @@ export default function Home() {
                 (310) 642-0408
               </span>
             </a>
+            <span
+              aria-hidden="true"
+              className="hidden h-8 w-px bg-cream/15 sm:block"
+            />
+            <div className="inline-flex flex-col items-center">
+              <span className="font-body text-[11px] uppercase tracking-[0.18em] text-cream/45">
+                Fax
+              </span>
+              <span className="mt-1 font-display text-xl font-light text-cream">
+                (310) 642-4684
+              </span>
+            </div>
           </div>
+
+          <a
+            href="https://maps.google.com/?q=21250+Hawthorne+Boulevard+Suite+500+Torrance+CA+90503"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group mt-7 inline-flex flex-col items-center"
+          >
+            <span className="font-body text-[11px] uppercase tracking-[0.18em] text-cream/45">
+              Office
+            </span>
+            <span className="mt-1 max-w-[22rem] font-display text-lg font-light leading-snug text-cream transition-colors group-hover:text-rose">
+              21250 Hawthorne Boulevard, Suite 500
+              <br />
+              Torrance, California 90503
+            </span>
+          </a>
         </section>
 
         {/* ── Micro footer ── */}
@@ -113,7 +146,7 @@ export default function Home() {
             </Link>
           </nav>
           <p className="font-body text-xs text-cream/55">
-            © 2026 Law Offices of Aisha M. Johnson · amjlaw.com · Beverly Hills,
+            © 2026 Law Offices of Aisha M. Johnson · amjlaw.com · Torrance,
             CA
           </p>
           <p className="mt-2 font-body text-[11px] italic text-cream/40">

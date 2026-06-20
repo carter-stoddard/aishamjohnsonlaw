@@ -153,6 +153,20 @@ export default function ConsultationForm() {
           </div>
         </fieldset>
 
+        <label className="flex cursor-pointer items-start gap-3 font-body text-sm leading-snug text-plum/80">
+          <input
+            type="checkbox"
+            name="marketingConsent"
+            value="yes"
+            className="mt-0.5 h-4 w-4 shrink-0 accent-[#6B4765]"
+          />
+          <span>
+            Yes, I&apos;d like Aisha to follow up with me and to receive
+            occasional updates and marketing emails from the firm. You can
+            unsubscribe at any time.
+          </span>
+        </label>
+
         {status === "error" && (
           <p className="rounded-sm bg-rose/40 px-4 py-3 text-center font-body text-sm text-plum">
             Something went wrong sending your request. Please try again, or

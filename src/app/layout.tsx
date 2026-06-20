@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Schedule a Consultation | AMJ Law — Aisha Johnson, Attorney at Law",
   description:
-    "Request a confidential legal consultation with Aisha Johnson, Attorney at Law, based in Beverly Hills, CA.",
+    "Request a confidential legal consultation with Aisha Johnson, Attorney at Law, based in Torrance, CA.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
     siteName: "AMJ Law",
     title: "Schedule a Consultation | AMJ Law — Aisha Johnson, Attorney at Law",
     description:
-      "Request a confidential legal consultation with Aisha Johnson, Attorney at Law, based in Beverly Hills, CA.",
+      "Request a confidential legal consultation with Aisha Johnson, Attorney at Law, based in Torrance, CA.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Schedule a Consultation | AMJ Law",
     description:
-      "Request a confidential legal consultation with Aisha Johnson, Attorney at Law, based in Beverly Hills, CA.",
+      "Request a confidential legal consultation with Aisha Johnson, Attorney at Law, based in Torrance, CA.",
   },
   robots: { index: true, follow: true },
 };

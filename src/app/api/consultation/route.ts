@@ -10,6 +10,7 @@ type Payload = {
   area?: string;
   message?: string;
   contactMethod?: string;
+  marketingConsent?: string;
 };
 
 function escapeHtml(value: string) {
@@ -46,6 +47,10 @@ export async function POST(request: Request) {
     ["Area of legal matter", body.area],
     ["Preferred contact", body.contactMethod],
     ["Message", body.message?.trim() || "—"],
+    [
+      "Follow-up / marketing consent",
+      body.marketingConsent === "yes" ? "Yes — opted in" : "No",
+    ],
   ];
 
   const apiKey = process.env.RESEND_API_KEY;
@@ -60,7 +65,7 @@ export async function POST(request: Request) {
   }
 
   const html = `
-    <div style="font-family:Arial,sans-serif;color:#2E1A2E">
+    <div style="font-family:Arial,sans-serif;color:#3b2540">
       <h2 style="font-weight:normal">New consultation request</h2>
       <table cellpadding="6" style="border-collapse:collapse">
         ${fields

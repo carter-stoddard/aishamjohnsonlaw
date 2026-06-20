@@ -36,7 +36,7 @@ export default function LegalPage({
         </div>
 
         <p className="mt-12 font-body text-xs text-cream/40">
-          © 2026 Law Offices of Aisha M. Johnson · Beverly Hills, CA
+          © 2026 Law Offices of Aisha M. Johnson · Torrance, CA
         </p>
       </article>
     </main>
