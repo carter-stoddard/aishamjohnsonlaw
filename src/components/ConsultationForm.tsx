@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 
 const PRACTICE_AREAS = [
   "Business & Corporate Law",
@@ -15,6 +15,12 @@ type Status = "idle" | "submitting" | "success" | "error";
 
 export default function ConsultationForm() {
   const [status, setStatus] = useState<Status>("idle");
+  const successRef = useRef<HTMLDivElement>(null);
+
+  // Move focus to the confirmation so screen-reader users are taken to it.
+  useEffect(() => {
+    if (status === "success") successRef.current?.focus();
+  }, [status]);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -39,13 +45,19 @@ export default function ConsultationForm() {
   // ── Confirmation state (replaces the form on success) ──
   if (status === "success") {
     return (
-      <div className="amj-enter rounded-md bg-ivory px-8 py-14 text-center shadow-xl shadow-black/20">
+      <div
+        ref={successRef}
+        tabIndex={-1}
+        role="status"
+        aria-live="polite"
+        className="amj-enter rounded-md bg-ivory px-8 py-14 text-center shadow-xl shadow-black/20 outline-none"
+      >
         <h2 className="font-display text-4xl font-light text-plum">Thank You</h2>
         <p className="mx-auto mt-5 max-w-[420px] font-body text-base leading-relaxed text-plum/80">
           Your consultation request has been received. I&apos;ll be in touch
           within one business day to confirm your appointment.
         </p>
-        <p className="mt-6 font-body text-sm text-plum/55">
+        <p className="mt-6 font-body text-sm text-plum/70">
           Questions in the meantime? Reach out at{" "}
           <a href="mailto:aisha@amjlaw.com" className="underline">
             aisha@amjlaw.com
@@ -57,7 +69,7 @@ export default function ConsultationForm() {
 
   return (
     <div className="rounded-md bg-ivory px-6 py-8 shadow-xl shadow-black/20 sm:px-8 sm:py-10">
-      <form onSubmit={handleSubmit} className="space-y-5" noValidate>
+      <form onSubmit={handleSubmit} className="space-y-5">
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           <Field label="Full Name" htmlFor="name" required>
             <input
@@ -164,7 +176,10 @@ export default function ConsultationForm() {
         </label>
 
         {status === "error" && (
-          <p className="rounded-sm bg-rose/40 px-4 py-3 text-center font-body text-sm text-plum">
+          <p
+            role="alert"
+            className="rounded-sm bg-rose/40 px-4 py-3 text-center font-body text-sm text-plum"
+          >
             Something went wrong sending your request. Please try again, or
             email{" "}
             <a href="mailto:aisha@amjlaw.com" className="underline">
@@ -177,12 +192,13 @@ export default function ConsultationForm() {
         <button
           type="submit"
           disabled={status === "submitting"}
+          aria-busy={status === "submitting"}
           className="w-full rounded-sm bg-mauve px-6 py-4 font-body text-sm font-bold uppercase tracking-[0.12em] text-cream transition-colors hover:bg-plum disabled:cursor-not-allowed disabled:opacity-60"
         >
           {status === "submitting" ? "Sending…" : "Request a Consultation"}
         </button>
 
-        <p className="text-center font-body text-xs text-plum/50">
+        <p className="text-center font-body text-xs text-plum/70">
           Your information is confidential and will not be shared with third
           parties.
         </p>
@@ -192,7 +208,7 @@ export default function ConsultationForm() {
 }
 
 const inputClass =
-  "w-full rounded-sm border border-plum/15 bg-white px-3.5 py-2.5 font-body text-sm text-plum outline-none transition-colors placeholder:text-plum/40 focus:border-mauve focus:ring-2 focus:ring-mauve/20";
+  "w-full rounded-sm border border-plum/30 bg-white px-3.5 py-2.5 font-body text-sm text-plum outline-none transition-colors placeholder:text-plum/60 focus:border-mauve focus:ring-2 focus:ring-mauve/40";
 
 function Field({
   label,

@@ -10,7 +10,10 @@ export default function LegalPage({
   children: React.ReactNode;
 }) {
   return (
-    <main className="flex min-h-dvh flex-col items-center px-6 py-14 sm:py-20">
+    <main
+      id="main-content"
+      className="flex min-h-dvh flex-col items-center px-6 py-14 sm:py-20"
+    >
       <article className="amj-enter w-full max-w-[720px]">
         <Link
           href="/"
@@ -22,7 +25,7 @@ export default function LegalPage({
         <h1 className="mt-8 font-display text-4xl font-light text-cream sm:text-5xl">
           {title}
         </h1>
-        <p className="mt-3 font-body text-sm text-cream/50">
+        <p className="mt-3 font-body text-sm text-cream/70">
           Last updated: {updated}
         </p>
 
@@ -30,7 +33,7 @@ export default function LegalPage({
           {children}
         </div>
 
-        <p className="mt-12 font-body text-xs text-cream/40">
+        <p className="mt-12 font-body text-xs text-cream/65">
           © 2026 Law Offices of Aisha M. Johnson · Torrance, CA
         </p>
       </article>

@@ -47,7 +47,10 @@ const STEPS = [
 
 export default function Home() {
   return (
-    <main className="flex min-h-dvh flex-col items-center px-6 py-14 sm:py-20">
+    <main
+      id="main-content"
+      className="flex min-h-dvh flex-col items-center px-6 py-14 sm:py-20"
+    >
       <div className="amj-enter w-full max-w-[640px]">
         {/* ── Header: logo placeholder, centered, links to amjlaw.com ── */}
         <header className="flex justify-center">
@@ -154,7 +157,7 @@ export default function Home() {
               href="mailto:aisha@amjlaw.com"
               className="group inline-flex flex-col items-center"
             >
-              <span className="font-body text-[11px] uppercase tracking-[0.18em] text-cream/45">
+              <span className="font-body text-[11px] uppercase tracking-[0.18em] text-cream/70">
                 Email
               </span>
               <span className="mt-1 font-display text-xl font-light text-cream transition-colors group-hover:text-rose">
@@ -169,7 +172,7 @@ export default function Home() {
               href="tel:+13106420408"
               className="group inline-flex flex-col items-center"
             >
-              <span className="font-body text-[11px] uppercase tracking-[0.18em] text-cream/45">
+              <span className="font-body text-[11px] uppercase tracking-[0.18em] text-cream/70">
                 Phone
               </span>
               <span className="mt-1 font-display text-xl font-light text-cream transition-colors group-hover:text-rose">
@@ -181,7 +184,7 @@ export default function Home() {
               className="hidden h-8 w-px bg-cream/15 sm:block"
             />
             <div className="inline-flex flex-col items-center">
-              <span className="font-body text-[11px] uppercase tracking-[0.18em] text-cream/45">
+              <span className="font-body text-[11px] uppercase tracking-[0.18em] text-cream/70">
                 Fax
               </span>
               <span className="mt-1 font-display text-xl font-light text-cream">
@@ -196,7 +199,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="group mt-7 inline-flex flex-col items-center"
           >
-            <span className="font-body text-[11px] uppercase tracking-[0.18em] text-cream/45">
+            <span className="font-body text-[11px] uppercase tracking-[0.18em] text-cream/70">
               Office
             </span>
             <span className="mt-1 max-w-[22rem] font-display text-lg font-light leading-snug text-cream transition-colors group-hover:text-rose">
@@ -229,11 +232,11 @@ export default function Home() {
               Legal Disclaimer
             </Link>
           </nav>
-          <p className="font-body text-xs text-cream/55">
+          <p className="font-body text-xs text-cream/70">
             © 2026 Law Offices of Aisha M. Johnson · amjlaw.com · Torrance,
             CA
           </p>
-          <p className="mt-2 font-body text-[11px] italic text-cream/40">
+          <p className="mt-2 font-body text-[11px] italic text-cream/65">
             Attorney advertising. Prior results do not guarantee a similar
             outcome.
           </p>
