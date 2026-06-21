@@ -27,11 +27,6 @@ export default function LegalPage({
         </p>
 
         <div className="legal-body mt-10 space-y-6 font-body text-[15px] leading-relaxed text-cream/80">
-          <p className="rounded-sm border border-rose/30 bg-rose/10 px-4 py-3 text-sm text-cream/75">
-            <strong>Placeholder notice:</strong> This is template language for
-            layout purposes and is not legal advice. Replace with final copy
-            reviewed and approved by the attorney before publishing.
-          </p>
           {children}
         </div>
 
