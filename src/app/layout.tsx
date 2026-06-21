@@ -47,6 +47,13 @@ export const metadata: Metadata = {
       "Request a confidential legal consultation with Aisha Johnson, Attorney at Law, based in Torrance, CA.",
   },
   robots: { index: true, follow: true },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({
