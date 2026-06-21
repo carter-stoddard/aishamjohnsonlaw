@@ -57,10 +57,6 @@ export default function ConsultationForm() {
 
   return (
     <div className="rounded-md bg-ivory px-6 py-8 shadow-xl shadow-black/20 sm:px-8 sm:py-10">
-      <p className="mb-6 text-center font-body text-xs font-bold uppercase tracking-[0.28em] text-mauve">
-        Consultation Request
-      </p>
-
       <form onSubmit={handleSubmit} className="space-y-5" noValidate>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           <Field label="Full Name" htmlFor="name" required>
