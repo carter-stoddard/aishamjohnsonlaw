@@ -63,7 +63,7 @@ export default function PrivacyPage() {
         </p>
       </LegalSection>
 
-      <LegalSection heading="Cookies">
+      <LegalSection heading="Cookies & Analytics">
         <p>
           This website uses cookies to remember your preferences and improve
           your browsing experience. You may accept or decline non-essential
@@ -71,15 +71,36 @@ export default function PrivacyPage() {
           cookie settings in your browser at any time. Disabling cookies may
           affect how parts of the site function.
         </p>
+        <p>
+          We also use Google Analytics, a web analytics service provided by
+          Google, to help us understand how visitors use this website. Google
+          Analytics uses cookies and similar technologies to collect information
+          such as your IP address, device and browser type, pages visited, and
+          how you interact with the site. This information helps us measure and
+          improve the site&rsquo;s performance. Google may process this data in
+          accordance with its own privacy policy. You can opt out of Google
+          Analytics by installing the{" "}
+          <a
+            href="https://tools.google.com/dlpage/gaoptout"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-rose underline"
+          >
+            Google Analytics Opt-out Browser Add-on
+          </a>
+          .
+        </p>
       </LegalSection>
 
       <LegalSection heading="Data Retention">
         <p>
           We retain the information you submit for as long as necessary to
           respond to your inquiry, provide any services you request, and comply
-          with our legal, professional, and recordkeeping obligations. When
-          information is no longer needed, we take reasonable steps to delete or
-          de-identify it.
+          with our legal, professional, and recordkeeping obligations. Aisha M.
+          Johnson may store the contact information you provide in order to
+          follow up with you and to re-contact you about your inquiry, your
+          matter, or our services. When information is no longer needed, we take
+          reasonable steps to delete or de-identify it.
         </p>
       </LegalSection>
 
