@@ -73,7 +73,7 @@ export default function Home() {
         {/* ── Hero ── */}
         <section className="mt-8 text-center sm:mt-10">
           <h1 className="mx-auto max-w-[560px] font-display text-3xl font-light leading-snug text-cream sm:text-4xl">
-            Considered counsel for business, property, and life&apos;s important
+            Thoughtful counsel for business, property, and life&apos;s important
             decisions.
           </h1>
         </section>
