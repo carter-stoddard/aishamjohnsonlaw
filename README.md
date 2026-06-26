@@ -26,7 +26,8 @@ request to the server console). To deliver leads by email:
    - `RESEND_API_KEY` — your key
    - `CONSULTATION_TO_EMAIL` — the inbox that should receive leads
    - `CONSULTATION_FROM_EMAIL` — a verified sender (use `onboarding@resend.dev`
-     for testing; verify the `amjlaw.com` domain in Resend for production)
+     for testing; the `aishamjohnsonlaw.com` domain is verified in Resend for
+     production, e.g. `consultations@aishamjohnsonlaw.com`)
 3. Restart `npm run dev`.
 
 > `.env.local` holds secrets and is never committed to GitHub.
